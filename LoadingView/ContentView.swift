@@ -7,9 +7,11 @@
 
 import SwiftUI
 
-@State private var isLoading = false
+
 
 struct ContentView: View {
+    @Start private var isLoading = false
+    
     var body: some View {
         ZStack {
             Color(.red)
@@ -21,11 +23,16 @@ struct ContentView: View {
                 .padding()
             
         }
+        .onAppear { startFakeNetworkcall() }
     }
     
     func startFakeNetworkcall() {
+        
+        isLoading = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 3)
-            { }
+            {
+            isLoading = false
+        }
     }
 }
 
