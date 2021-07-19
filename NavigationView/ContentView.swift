@@ -10,11 +10,20 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            CircleNumberView(colors: .blue, Number: 1)
-                .navigationTitle("Blue One")
-                .offset(y: -60)
+            VStack {
+                
+                CircleNumberView(colors: .red, Number: 1)
+                    .navigationTitle("Red One")
+                    .offset(y: -60)
+                NavigationLink(
+                    destination: Text("Destination"),
+                    label: {
+                        Text("Next Screen")
+                    })
+            }
+            
         }
-     
+        
     }
 }
 
