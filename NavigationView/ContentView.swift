@@ -38,6 +38,10 @@ struct BlueView: View {
                     destination: YellowView(),
                     label: {
                         Text("Next Screen")
+                            .bold()
+                            .background(Color.blue)
+                        
+                        
                     })
             
             
