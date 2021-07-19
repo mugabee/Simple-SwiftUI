@@ -16,6 +16,25 @@ struct ContentView: View {
                     .navigationTitle("Red One")
                     .offset(y: -60)
                 NavigationLink(
+                    destination: BlueView(),
+                    label: {
+                        Text("Next Screen")
+                    })
+            }
+            
+        }
+        
+    }
+}
+struct BlueView: View {
+    var body: some View {
+        NavigationView {
+            VStack {
+                
+                CircleNumberView(colors: .red, Number: 1)
+                    .navigationTitle("Red One")
+                    .offset(y: -60)
+                NavigationLink(
                     destination: Text("Destination"),
                     label: {
                         Text("Next Screen")
