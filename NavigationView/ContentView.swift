@@ -9,7 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        CircleNumberView(colors: .blue, Number: 1)
+        NavigationView {
+            CircleNumberView(colors: .blue, Number: 1)
+        }
+     
     }
 }
 
