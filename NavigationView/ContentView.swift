@@ -12,6 +12,7 @@ struct ContentView: View {
         NavigationView {
             CircleNumberView(colors: .blue, Number: 1)
                 .navigationTitle("Blue One")
+                .offset(y: -60)
         }
      
     }
