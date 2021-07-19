@@ -23,9 +23,13 @@ struct ContentView: View {
                 .bold()
                 .padding()
             
-            ProgressView()
-                .progressViewStyle(CircularProgressViewStyle(tint: .blue))
-                .scaleEffect(3)
+            if isLoading {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: .blue))
+                    .scaleEffect(3)
+                
+            }
+            
             
         }
         .onAppear { startFakeNetworkcall() }
