@@ -22,12 +22,16 @@ struct ContentView: View {
                 .foregroundColor(.white)
                 .bold()
                 .padding()
+            ZStack {
+                Color(.systemBackground)
+                    .ignoresSafeArea()
+                if isLoading {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle(tint: .blue))
+                        .scaleEffect(3)
+                    
+            }
             
-            if isLoading {
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle(tint: .blue))
-                    .scaleEffect(3)
-                
             }
             
             
@@ -36,7 +40,7 @@ struct ContentView: View {
     }
     
     func startFakeNetworkcall() {
-        
+        // this three here means that our loading view will last 3 sec
         isLoading = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 3)
             {
