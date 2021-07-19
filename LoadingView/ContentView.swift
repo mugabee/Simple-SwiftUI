@@ -10,7 +10,8 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @Start private var isLoading = false
+    
+    @State private var isLoading = false
     
     var body: some View {
         ZStack {
@@ -21,6 +22,10 @@ struct ContentView: View {
                 .foregroundColor(.white)
                 .bold()
                 .padding()
+            
+            ProgressView()
+                .progressViewStyle(CircularProgressViewStyle(tint: .blue))
+                .scaleEffect(3)
             
         }
         .onAppear { startFakeNetworkcall() }
