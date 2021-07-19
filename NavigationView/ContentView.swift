@@ -9,18 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            Circle()
-                .frame(width:100, height: 100)
-                .foregroundColor(.blue)
-            Text("1")
-                .foregroundColor(.white)
-                .frame(width: 250, height: 250, alignment: .center)
-                .font(.title)
-                
-           
-            
-        }
+        CircleNumberView(colors: .blue, Number: 1)
     }
 }
 
@@ -31,10 +20,18 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct CircleNumberView: View {
-    Var colors: Color
+    var colors: Color
     var Number: Int
     
     var body: some View {
-        ZStack
+        ZStack {
+            Circle()
+                .frame(width: 100, height: 100)
+                .foregroundColor(colors)
+            Text("\(Number)")
+                .foregroundColor(.white)
+                .font(.system(size: 70, weight: .bold))
+            
+        }
     }
 }
