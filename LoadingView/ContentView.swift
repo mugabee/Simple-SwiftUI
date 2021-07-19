@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+@State private var isLoading = false
+
 struct ContentView: View {
     var body: some View {
         ZStack {
