@@ -20,6 +20,11 @@ struct ContentView: View {
             
         }
     }
+    
+    func startFakeNetworkcall() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3)
+            { }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
