@@ -28,20 +28,36 @@ struct ContentView: View {
 }
 struct BlueView: View {
     var body: some View {
-        NavigationView {
+       
             VStack {
                 
-                CircleNumberView(colors: .red, Number: 1)
-                    .navigationTitle("Red One")
+                CircleNumberView(colors: .blue, Number: 2)
+                    .navigationTitle("Blue two")
                     .offset(y: -60)
                 NavigationLink(
-                    destination: Text("Destination"),
+                    destination: YellowView(),
                     label: {
                         Text("Next Screen")
                     })
-            }
+            
             
         }
+        
+    }
+}
+struct YellowView: View {
+    var body: some View {
+       
+            VStack {
+                
+                CircleNumberView(colors: .yellow, Number: 3)
+                    .navigationTitle("Yellow Three two")
+                    .offset(y: -60)
+                Text("final Page")
+                    .font(.system(size: 70, weight: .bold))
+            
+            
+            }
         
     }
 }
