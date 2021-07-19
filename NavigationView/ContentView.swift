@@ -19,6 +19,12 @@ struct ContentView: View {
                     destination: BlueView(),
                     label: {
                         Text("Next Screen")
+                            .bold()
+                            .frame(width: 280, height: 50)
+                            .background(Color.blue)
+                            
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
                     })
             }
             
@@ -38,8 +44,8 @@ struct BlueView: View {
                     destination: YellowView(),
                     label: {
                         Text("Next Screen")
-                            .bold()
-                            .background(Color.blue)
+                            
+                            
                         
                         
                     })
