@@ -11,6 +11,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             CircleNumberView(colors: .blue, Number: 1)
+                .navigationTitle("Blue One")
         }
      
     }
