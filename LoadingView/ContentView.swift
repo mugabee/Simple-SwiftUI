@@ -22,10 +22,11 @@ struct ContentView: View {
                 .foregroundColor(.white)
                 .bold()
                 .padding()
-            ZStack {
-                Color(.systemBackground)
-                    .ignoresSafeArea()
+            
                 if isLoading {
+                    ZStack {
+                        Color(.systemBackground)
+                            .ignoresSafeArea()
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle(tint: .blue))
                         .scaleEffect(3)
